@@ -1,0 +1,11 @@
+.container {
+  padding: 1rem;
+  height: 60px;
+  background-color: var(--othercolor);
+  color: var(--bgcolor);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

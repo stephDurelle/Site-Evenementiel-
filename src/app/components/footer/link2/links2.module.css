@@ -1,0 +1,19 @@
+.containerLink{
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+    margin-right: 20px;
+    color: black;
+
+    
+}
+.containerLink :hover{
+text-decoration: underline;
+}
+.active{
+    
+    color:var(--textcolor);
+    padding:0;
+    display: flex;
+    align-items: center;
+}

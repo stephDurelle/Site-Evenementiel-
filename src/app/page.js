@@ -1,113 +1,80 @@
-import Image from "next/image";
+'use client';
+import { Fragment,useState, useEffect } from "react";
+import Styles from "./home.module.css"
+
+
 
 export default function Home() {
+  const [currentImage, setCurrentImage]= useState(0);
+  const images= [
+    "./ImageIntro/Image0.jpg",
+    "./ImageIntro/Image1.jpg",
+    "./ImageIntro/image2.jpeg",
+    "./ImageIntro/Image3.jpg",
+    "./ImageIntro/Image4.jpg",
+    "./ImageIntro/Image5.jpg",
+    "./ImageIntro/Image6.jpg",
+    "./ImageIntro/Image7.jpg",
+    "./ImageIntro/Image8.jpg",
+    "./ImageIntro/Image9.jpeg",
+    "./ImageIntro/Image10.jpeg",
+    "./ImageIntro/Image11.jpeg",
+    "./ImageIntro/Image12.jpeg",
+    "./ImageIntro/Image13.jpeg",
+    "./ImageIntro/Image14.jpeg",
+    "./ImageIntro/Image15.jpeg",
+    "./ImageIntro/Image16.jpg",
+    "./ImageIntro/Image17.jpg",
+    "./ImageIntro/Image18.jpg",
+    "./ImageIntro/Image19.jpeg",
+    "./ImageIntro/Image20.jpeg",
+
+  ];
+  useEffect(()=> {
+    const interval= setInterval(()=> {
+      setCurrentImage((prevIndex)=>(prevIndex+1)% images.length);
+    
+    },2500);
+    return ()=> clearInterval (interval);
+  }, [images.length])
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+  
+    <main>
+       <Fragment>
+        <div className={Styles.Container}> 
+        <div className={Styles.Titre}> <h1> 🎉 Explore the Emotion of Events! 🎉</h1> </div>
+
+        <div className={Styles.imageContainer}>
+          
+        <img src={images[currentImage]} alt= {`Image ${currentImage+1}`} height={100} width={250}/>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+<div className={Styles.intro}> Dive into a world where every moment becomes an unforgettable experience. At Aurore, we're passionate about crafting events that transcend expectations and leave a lasting imprint in your memories. </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+<div className={Styles.Titre}>  🌟 Our Featured Events: </div>
+<div>
+<ol>
+  <li>
+ 1. Enchanting Concerts: Feel the pulse of the music at our enchanting concerts where the most talented artists take you on an unforgettable sonic journey. Dance under the stars and let the music carry you away.
+  </li>
+  <li>2. CandleLight: Immerse yourself in an intimate and cozy ambiance with our CandleLight events. Amidst the glow of candles, experience captivating artistic performances, exquisite tastings, and moments of pure magic.</li>
+<li>3. Love Festivals:  Celebrate love in all its forms at our festivals dedicated to lovers. From romantic encounters to starlit evenings, let us create unforgettable memories for you and your significant other.</li>
+<li>4. Art Exhibitions: Delve into a world of creativity and beauty with our art exhibitions. Discover breathtaking masterpieces, meet inspiring artists, and be transported by art in all its forms.</li>
+<li>5. Bespoke Events: Whether it's a birthday, a wedding, or a special gathering, we create tailor-made events that captivate hearts and leave a lasting impression. Every detail is carefully orchestrated to create a unique and unforgettable experience.</li>
+</ol> <br></br>
+</div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+<div className={Styles.intro}> No matter the event you envision, our dedicated team is here to turn your dreams into reality. Contact us today and let us bring your wildest ideas to life!</div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+<div className={Styles.Titre}> ✨ AURORE - Awaken the extraordinary in every event. ✨
+</div>
+        </div>
+      </Fragment>
+     
+
     </main>
+   
   );
 }

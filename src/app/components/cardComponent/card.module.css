@@ -1,0 +1,85 @@
+.container{
+    height: 50px;
+    width: 300px;
+    margin: 1rem;
+    transition: all 0.3 ease;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+.container:hover {
+    transform: scale(1.10); /* Grossit légèrement la carte */
+    filter: brightness(98%); /* Augmente la luminosité */
+  }
+.topCard{
+    padding: 10px;
+    background-color: rgb(31, 148, 238);
+    border-radius: 20px 20px 0px 0px;
+
+}
+.avatar{
+    padding:0px;
+    background-color:var(--othercolor) ;
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    
+}
+.avatarContainer {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    padding: 20px; /* Ajoutez un espacement si nécessaire */
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.avatar img {
+   
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .readButton {
+    background-color: rgb(81, 164, 8);
+    color: black;
+   border-radius: 20px;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+
+  @media (max-width: 600px) {
+    .position {
+        flex-direction: column;
+        align-items: center; /* Centrer les éléments dans le conteneur */
+        background-color: black;
+        color: white;
+    }
+
+    .container {
+        width: 80%; /* Redimensionnez la largeur pour s'adapter à l'écran mobile */
+        border-radius: 10px;
+        margin: 10px auto; /* Centrez les cartes horizontalement */
+    }
+
+    .topCard {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .avatarContainer {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+}
+  

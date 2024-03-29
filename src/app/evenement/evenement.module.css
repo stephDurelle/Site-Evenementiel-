@@ -1,0 +1,54 @@
+
+.titreContainer{
+
+    text-align: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 60px;
+    font-size: 30px;
+    color:var(--textcolor);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.position{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 650px;
+}
+.Container{
+    height: 100vh;
+  width: 100vw;
+    display: flex;
+    flex-direction: column; 
+  justify-content: space-between;
+
+}
+
+  @media (max-width: 600px) {
+    .position {
+      flex-direction: column; /* Disposer en colonne pour les appareils mobiles */
+      align-items: center; /* Centrer les éléments dans le conteneur */
+      background-color: white; /* Facultatif : couleur de fond pour mieux distinguer */
+      color: black; /* Facultatif : couleur du texte */
+    }
+  
+    .position .CardComponent {
+       
+      width: 80%; /* Redimensionnez la largeur pour s'adapter à l'écran mobile */
+      border-radius: 10px;
+      margin: 10px auto; /* Centrez les cartes horizontalement */
+    }
+  
+    .topCard {
+      border-radius: 10px 10px 0px 0px;
+    }
+  
+    .avatarContainer {
+      padding: 10px;
+    }
+  
+    .title {
+      font-size: 1.2rem; /* Réduisez la taille de la police pour l'écran mobile */
+    }
+   
+  }

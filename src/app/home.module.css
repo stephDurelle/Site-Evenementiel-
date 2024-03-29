@@ -1,0 +1,58 @@
+.Titre{
+  margin: 20px;
+  font-weight: bold;
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: oblique;
+  text-align: center;
+}
+.Titre h1{
+ font-size: larger;
+}
+.Container{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 5px;
+  margin-bottom: 100px;
+}
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.imageContainer img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+  @media (max-width: 600px) {
+    .position {
+      flex-direction: column; /* Disposer en colonne pour les appareils mobiles */
+      align-items: center; /* Centrer les éléments dans le conteneur */
+      background-color: white; /* Facultatif : couleur de fond pour mieux distinguer */
+      color: black; /* Facultatif : couleur du texte */
+    }
+  
+    .position .CardComponent {
+       
+      width: 80%; /* Redimensionnez la largeur pour s'adapter à l'écran mobile */
+      border-radius: 10px;
+      margin: 10px auto; /* Centrez les cartes horizontalement */
+    }
+  
+    .topCard {
+      border-radius: 10px 10px 0px 0px;
+    }
+  
+    .avatarContainer {
+      padding: 10px;
+    }
+  
+    .title {
+      font-size: 1.2rem; /* Réduisez la taille de la police pour l'écran mobile */
+    }
+   
+  }

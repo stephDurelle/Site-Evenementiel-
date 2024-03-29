@@ -1,0 +1,148 @@
+.Contain {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  
+  }
+  .container{
+    width: 75%;
+  }
+  .imageContainer {
+   margin: 20px;
+   margin-left: 30px;
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+  
+  }
+  
+  .textContainer {
+  width: 70%;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 110px;
+  }
+  
+   .text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 30px;
+    position: relative;
+  }
+  
+  .title1 {
+    margin-top: 45px;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 20px;
+    align-items: center;
+  }
+  .title2{
+    margin-top: 45px;
+    font-weight: bold;
+    font-size: 18px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .text2 {
+    margin-top: 0px; /* Ajoute de l'espace entre le titre et le texte */
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+  }
+  
+  .title3 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 3px;
+    margin-bottom: 10px;
+  }
+  
+  .ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding-left: 0; /* Supprime le décalage gauche par défaut */
+    padding: 0;
+}
+  
+  ul .li {
+    margin-bottom: 5px; /* Ajoute de l'espace entre chaque élément de la liste */
+  }
+  
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 30%;
+  }
+  
+  .textContainer2 {
+    border: 1px solid #ccc;
+    border-radius: 35px;
+    padding: 20px;
+  }
+  
+  
+  
+  .li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  .bold0 {
+    font-weight: bold;
+    background-color: rgb(12, 235, 83);
+    height: 57px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .bold1 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+  .button{
+  border-radius: 30px;
+  width: 80px;
+  height: 70px;
+  text-align: center;
+  background-color: aqua;
+  align-items: center;
+  margin: auto;
+  }
+  
+    /* Ajoutez ces règles CSS à votre fichier event1.module.css */
+  
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imageContainer {
+      margin-left: 0; /* Supprimez la marge à gauche */
+      margin-bottom: 20px; /* Ajoutez une marge en bas */
+    }
+  
+    .textContainer {
+      width: 80%; /* Prend toute la largeur disponible */
+      text-align: center;
+    }
+  
+    .container2 {
+      position: static; /* Supprimez la position absolue */
+      top: auto;
+      right: auto;
+      margin: 20px auto; /* Centrez horizontalement */
+      width: 80%; /* Prend toute la largeur disponible */
+    }
+  }
+  

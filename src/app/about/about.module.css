@@ -1,0 +1,56 @@
+
+.aboutContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+.aboutContainer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.aboutContainer h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.aboutContainer p {
+    margin-bottom: 15px;
+}
+
+.aboutContainer ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.aboutContainer li {
+    margin-bottom: 5px;
+}
+
+.aboutContainer .socialLinks {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.aboutContainer .socialLinks li a {
+    color: blue; 
+    text-decoration: none;
+}
+
+.aboutContainer .socialLinks li a:hover {
+    text-decoration: underline;
+}
+.titre{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.socialLinks{
+    margin-top: 50px;
+   
+}
